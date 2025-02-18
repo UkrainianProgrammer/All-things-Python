@@ -25,7 +25,7 @@ def with_multiprocessing():
     print('Starting with multiprocessing.')
     jobs = []
 
-    for i in range(NUMBER_OF_ITERATIONS):
+    for i in range(NUMBER_OF_PROCESSES):
         p = multiprocessing.Process(target=sum_all_numbers, args=(N,))
         jobs.append(p)
     
