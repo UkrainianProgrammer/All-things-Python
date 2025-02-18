@@ -30,7 +30,7 @@ def download_images_with_threading(images):
     for image_url in images:
         q.put(image_url)
     
-    for t in range(NUMBER_OF_THREADS):
+    for _ in range(NUMBER_OF_THREADS):
         worker = Thread(target=download_image, args=('with_multithreading_images',))
         worker.daemon = True
         print('Starting ' + worker.name)
