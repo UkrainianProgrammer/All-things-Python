@@ -2,6 +2,7 @@ class Library:
     def __init__(self, name):
         self.name = name
         self.books = []
+        self.selectedBook = None
     
     def add_book(self, book):
         if not isinstance(book, Book):
@@ -37,6 +38,7 @@ class Book:
         self.title = title
         self.author = author
         self.isbn = isbn
+        self.bookmarkedPage = 0
     
     def __str__(self):
         return f"Title: {self.title}, Author: {self.author}, ISBN: {self.isbn}"
